@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Prueba</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="bg-blue-600/70 mb-2 shadow-lg">
+            <div class="container mx-auto flex items-center justify-between p-2">
+                <a href="/" class="flex items-center">
+                    <img class="w-50px h-10 rounded-xl" src="https://excelec.com/wp-content/uploads/2021/06/logo-Aquafidi-4.png?x55216" alt="Logo" />
+                </a>
+                <button class="text-white focus:outline-none sm:hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <div class="hidden w-full sm:flex sm:items-center sm:w-auto" id="navbarMenu">
+                    <ul class="flex flex-col text-white sm:flex-row sm:gap-5">
+                        <li><a href="/" class="block rounded px-3 py-2 text-white">Inicio</a></li>
+                        <li><a href="/nosotros" class="block rounded px-3 py-2 text-white">Nosotros</a></li>
+                        <li><a href="/servicios" class="block rounded px-3 py-2 text-white">Servicios</a></li>
+                        <li><a href="/mas" class="block rounded px-3 py-2 text-white">Más</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
